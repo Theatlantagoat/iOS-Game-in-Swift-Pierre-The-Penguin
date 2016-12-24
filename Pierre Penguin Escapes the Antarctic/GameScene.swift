@@ -12,30 +12,40 @@ import GameplayKit
 class GameScene: SKScene {
     
     
+    //creating the world as a generic SKNode:
+    let world = SKNode()
+    
+    //creating the bee node as a property of the Game Scene so it can be accessed throughout the code:
+    let bee = SKSpriteNode()
+    
     
     
     override func didMove(to view: SKView) {
         
-        
-        //setting the scenes background to a nice sky blue:
-        //Note: UIColor uses a scale from 1-10 for its colors??Whhhaa??
         self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.95, alpha: 1.0)
         
-        //creating our bee node:
-        let bee = SKSpriteNode()
+        //add the world node as a child of the scene
+        self.addChild(world)
         
-        //size our bee node:
-        bee.size = CGSize(width: 28, height: 24)
+        //bee is a new function we're adding and I need to call it here:
+        self.addTheFlyingBee()
         
-        //position our bee node:
+    }
+    
+    //putting of our bee sprite animation code here:
+    func addTheFlyingBee(){
+        //position the texture of the sprite
         bee.position = CGPoint(x: 250, y: 250)
+        bee.size = CGSize.init(width: 28, height: 24)
+        //this following line of code is how you attached the bee node to the world node
+        world.addChild(bee)
         
         //declare the bee atlas that houses the images for the bee
         let beeAtlas = SKTextureAtlas(named: "bee.atlas")
         
         let beeFrames : [SKTexture] = [
-        beeAtlas.textureNamed("bee.png"),
-        beeAtlas.textureNamed("bee_fly.png")]
+            beeAtlas.textureNamed("bee.png"),
+            beeAtlas.textureNamed("bee_fly.png")]
         
         let flyAction = SKAction.animate(with: beeFrames, timePerFrame: 0.14)
         
@@ -62,10 +72,21 @@ class GameScene: SKScene {
         //now we're telling our bee to run the flight path, and away it goes:
         bee.run(neverEndingFlight)
         
-        //attach our bee to the scene's node tree:
-        self.addChild(bee)
-        
-        
+    }
+    
+    //a new function:
+    override func didSimulatePhysics() {
+        // To find the correct position, subtract half of the
+        // scene size from the bee's position, adjusted for any
+        // world scaling.
+        // Multiply by -1 and you have the adjustment to keep our
+        // sprite centered:
+        let worldXPos = -(bee.position.x * world.xScale -
+            (self.size.width / 2))
+        let worldYPos = -(bee.position.y * world.yScale -
+            (self.size.height / 2))
+        // Move the world so that the bee is centered in the scene
+        world.position = CGPoint(x: worldXPos, y: worldYPos)
     }
 
 }
