@@ -20,6 +20,9 @@
 		CAAEA66A1E0F3B660086F307 /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA6691E0F3B660086F307 /* GameSprite.swift */; };
 		CAAEA66C1E0F4EE10086F307 /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA66B1E0F4EE10086F307 /* Bee.swift */; };
 		CAAEA66E1E0F57120086F307 /* ground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CAAEA66D1E0F57120086F307 /* ground.atlas */; };
+		CAAEA6701E0F577E0086F307 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA66F1E0F577E0086F307 /* Ground.swift */; };
+		CAAEA6721E0F603F0086F307 /* pierre.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CAAEA6711E0F603F0086F307 /* pierre.atlas */; };
+		CAAEA6741E0F62580086F307 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA6731E0F62580086F307 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		CAAEA6691E0F3B660086F307 /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 		CAAEA66B1E0F4EE10086F307 /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
 		CAAEA66D1E0F57120086F307 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ground.atlas; sourceTree = "<group>"; };
+		CAAEA66F1E0F577E0086F307 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		CAAEA6711E0F603F0086F307 /* pierre.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pierre.atlas; sourceTree = "<group>"; };
+		CAAEA6731E0F62580086F307 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		CA8FB88D1E0CD33B00905500 /* Pierre Penguin Escapes the Antarctic */ = {
 			isa = PBXGroup;
 			children = (
+				CAAEA6711E0F603F0086F307 /* pierre.atlas */,
 				CAAEA66D1E0F57120086F307 /* ground.atlas */,
 				CAAEA6671E0EDC6E0086F307 /* bee.atlas */,
 				CA8FB88E1E0CD33B00905500 /* AppDelegate.swift */,
@@ -116,6 +123,8 @@
 				CA8FB8941E0CD33C00905500 /* GameScene.swift */,
 				CAAEA6691E0F3B660086F307 /* GameSprite.swift */,
 				CAAEA66B1E0F4EE10086F307 /* Bee.swift */,
+				CAAEA66F1E0F577E0086F307 /* Ground.swift */,
+				CAAEA6731E0F62580086F307 /* Player.swift */,
 				CA8FB8961E0CD33C00905500 /* GameViewController.swift */,
 				CA8FB8981E0CD33C00905500 /* Main.storyboard */,
 				CA8FB89B1E0CD33C00905500 /* Assets.xcassets */,
@@ -256,6 +265,7 @@
 				CAAEA66E1E0F57120086F307 /* ground.atlas in Resources */,
 				CAAEA6681E0EDC6E0086F307 /* bee.atlas in Resources */,
 				CA8FB89A1E0CD33C00905500 /* Main.storyboard in Resources */,
+				CAAEA6721E0F603F0086F307 /* pierre.atlas in Resources */,
 				CA8FB89C1E0CD33C00905500 /* Assets.xcassets in Resources */,
 				CA8FB89F1E0CD33C00905500 /* LaunchScreen.storyboard in Resources */,
 				CA8FB8931E0CD33C00905500 /* Actions.sks in Resources */,
@@ -283,9 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAEA6701E0F577E0086F307 /* Ground.swift in Sources */,
 				CAAEA66C1E0F4EE10086F307 /* Bee.swift in Sources */,
 				CAAEA66A1E0F3B660086F307 /* GameSprite.swift in Sources */,
 				CA8FB8951E0CD33C00905500 /* GameScene.swift in Sources */,
+				CAAEA6741E0F62580086F307 /* Player.swift in Sources */,
 				CA8FB8971E0CD33C00905500 /* GameViewController.swift in Sources */,
 				CA8FB88F1E0CD33B00905500 /* AppDelegate.swift in Sources */,
 			);

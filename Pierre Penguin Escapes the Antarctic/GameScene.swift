@@ -14,11 +14,11 @@ class GameScene: SKScene {
     
     //creating the world as a generic SKNode:
     let world = SKNode()
-    
-    //creating the bee node as a property of the Game Scene so it can be accessed throughout the code:
-    let bee = SKSpriteNode()
-    
-    
+
+    let player = Player()
+
+    //creating an instance of the ground class:
+    let ground = Ground()
     
     override func didMove(to view: SKView) {
         
@@ -26,64 +26,30 @@ class GameScene: SKScene {
         
         //add the world node as a child of the scene
         self.addChild(world)
-        
-        //bee is a new function we're adding and I need to call it here:
-        self.addTheFlyingBee()
-        
-        
+      
         //after creating the GameSprite protocol and the bee class, I will implement three new instances of bees:
         let bee2 = Bee()
         let bee3 = Bee()
         let bee4 = Bee()
-        
         
         //now I'll user the spawn function from the protocol to bring the three new bees into the world:
         bee2.spawn(parentNode: world, position: CGPoint(x: 325, y: 325))
         bee3.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
         bee4.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
         
-    }
-    
-    //putting of our bee sprite animation code here:
-    func addTheFlyingBee(){
-        //position the texture of the sprite
-        bee.position = CGPoint(x: 250, y: 250)
-        bee.size = CGSize.init(width: 28, height: 24)
-        //this following line of code is how you attached the bee node to the world node
-        world.addChild(bee)
+        player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
         
-        //declare the bee atlas that houses the images for the bee
-        let beeAtlas = SKTextureAtlas(named: "bee.atlas")
-        
-        let beeFrames : [SKTexture] = [
-            beeAtlas.textureNamed("bee.png"),
-            beeAtlas.textureNamed("bee_fly.png")]
-        
-        let flyAction = SKAction.animate(with: beeFrames, timePerFrame: 0.14)
-        
-        //create an action to run the flyAction repeatedly
-        let beeAction = SKAction.repeatForever(flyAction)
-        
-        //instruct our bee to run the final repeat action:
-        bee.run(beeAction)
-        
-        //setup new actions to move the bee back and forth:
-        let pathLeft = SKAction.moveBy(x: -200, y: -10, duration: 2)
-        let pathRight = SKAction.moveBy(x: 200, y: 10, duration: 2)
-        
-        //The following two scaleTo actions flip the bee texture back and fourth:
-        let flipTextureNegative = SKAction.scaleX(to: -1, duration: 0)
-        let flipTexturePositive = SKAction.scaleX(to: 1, duration: 0)
-        
-        //combining actions into a cohesive flight sequence for our bee:
-        let flightOfTheBee = SKAction.sequence([pathLeft,flipTextureNegative,pathRight,flipTexturePositive])
-        
-        //last we'll create a looping action that will repeat forever:
-        let neverEndingFlight = SKAction.repeatForever(flightOfTheBee)
-        
-        //now we're telling our bee to run the flight path, and away it goes:
-        bee.run(neverEndingFlight)
-        
+        // size and position the ground based on the screen size.
+        // Position X: Negative one screen width.
+        // Position Y: 100 above the bottom (remember the ground's top
+        // left anchor point).
+        let groundPosition = CGPoint(x: -self.size.width, y: 100)
+        // Width: 3x the width of the screen.
+        // Height: 0. Our child nodes will provide the height.
+        let groundSize = CGSize(width: self.size.width * 3, height:
+            0)
+        // Spawn the ground!
+        ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
     }
     
     //a new function:
@@ -93,10 +59,8 @@ class GameScene: SKScene {
         // world scaling.
         // Multiply by -1 and you have the adjustment to keep our
         // sprite centered:
-        let worldXPos = -(bee.position.x * world.xScale -
-            (self.size.width / 2))
-        let worldYPos = -(bee.position.y * world.yScale -
-            (self.size.height / 2))
+        let worldXPos = -(player.position.x * world.xScale - (self.size.width / 2))
+        let worldYPos = -(player.position.y * world.yScale - (self.size.height / 2))
         // Move the world so that the bee is centered in the scene
         world.position = CGPoint(x: worldXPos, y: worldYPos)
     }

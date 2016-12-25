@@ -25,6 +25,10 @@ class Bee: SKSpriteNode, GameSprite {
         self.size = size
         self.position = position
         self.run(flyAnimation)
+        
+        //Attaching a physics body, shaped like a circle and sized roughly to the size of the bee.
+        self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
+
     }
     
     func createAnimations(){
