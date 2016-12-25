@@ -30,6 +30,18 @@ class GameScene: SKScene {
         //bee is a new function we're adding and I need to call it here:
         self.addTheFlyingBee()
         
+        
+        //after creating the GameSprite protocol and the bee class, I will implement three new instances of bees:
+        let bee2 = Bee()
+        let bee3 = Bee()
+        let bee4 = Bee()
+        
+        
+        //now I'll user the spawn function from the protocol to bring the three new bees into the world:
+        bee2.spawn(parentNode: world, position: CGPoint(x: 325, y: 325))
+        bee3.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
+        bee4.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
+        
     }
     
     //putting of our bee sprite animation code here:

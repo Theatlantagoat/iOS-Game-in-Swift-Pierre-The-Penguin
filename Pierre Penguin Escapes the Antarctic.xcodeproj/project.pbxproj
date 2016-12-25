@@ -19,6 +19,7 @@
 		CAAEA6681E0EDC6E0086F307 /* bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CAAEA6671E0EDC6E0086F307 /* bee.atlas */; };
 		CAAEA66A1E0F3B660086F307 /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA6691E0F3B660086F307 /* GameSprite.swift */; };
 		CAAEA66C1E0F4EE10086F307 /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA66B1E0F4EE10086F307 /* Bee.swift */; };
+		CAAEA66E1E0F57120086F307 /* ground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CAAEA66D1E0F57120086F307 /* ground.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CAAEA6671E0EDC6E0086F307 /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bee.atlas; sourceTree = "<group>"; };
 		CAAEA6691E0F3B660086F307 /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 		CAAEA66B1E0F4EE10086F307 /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
+		CAAEA66D1E0F57120086F307 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ground.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		CA8FB88D1E0CD33B00905500 /* Pierre Penguin Escapes the Antarctic */ = {
 			isa = PBXGroup;
 			children = (
+				CAAEA66D1E0F57120086F307 /* ground.atlas */,
 				CAAEA6671E0EDC6E0086F307 /* bee.atlas */,
 				CA8FB88E1E0CD33B00905500 /* AppDelegate.swift */,
 				CA8FB8921E0CD33C00905500 /* Actions.sks */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAEA66E1E0F57120086F307 /* ground.atlas in Resources */,
 				CAAEA6681E0EDC6E0086F307 /* bee.atlas in Resources */,
 				CA8FB89A1E0CD33C00905500 /* Main.storyboard in Resources */,
 				CA8FB89C1E0CD33C00905500 /* Assets.xcassets in Resources */,
