@@ -17,6 +17,8 @@
 		CA8FB8AA1E0CD33C00905500 /* Pierre_Penguin_Escapes_the_AntarcticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8FB8A91E0CD33C00905500 /* Pierre_Penguin_Escapes_the_AntarcticTests.swift */; };
 		CA8FB8B51E0CD33C00905500 /* Pierre_Penguin_Escapes_the_AntarcticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8FB8B41E0CD33C00905500 /* Pierre_Penguin_Escapes_the_AntarcticUITests.swift */; };
 		CAAEA6681E0EDC6E0086F307 /* bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CAAEA6671E0EDC6E0086F307 /* bee.atlas */; };
+		CAAEA66A1E0F3B660086F307 /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA6691E0F3B660086F307 /* GameSprite.swift */; };
+		CAAEA66C1E0F4EE10086F307 /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAEA66B1E0F4EE10086F307 /* Bee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		CA8FB8B41E0CD33C00905500 /* Pierre_Penguin_Escapes_the_AntarcticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pierre_Penguin_Escapes_the_AntarcticUITests.swift; sourceTree = "<group>"; };
 		CA8FB8B61E0CD33C00905500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAAEA6671E0EDC6E0086F307 /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bee.atlas; sourceTree = "<group>"; };
+		CAAEA6691E0F3B660086F307 /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
+		CAAEA66B1E0F4EE10086F307 /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				CA8FB88E1E0CD33B00905500 /* AppDelegate.swift */,
 				CA8FB8921E0CD33C00905500 /* Actions.sks */,
 				CA8FB8941E0CD33C00905500 /* GameScene.swift */,
+				CAAEA6691E0F3B660086F307 /* GameSprite.swift */,
+				CAAEA66B1E0F4EE10086F307 /* Bee.swift */,
 				CA8FB8961E0CD33C00905500 /* GameViewController.swift */,
 				CA8FB8981E0CD33C00905500 /* Main.storyboard */,
 				CA8FB89B1E0CD33C00905500 /* Assets.xcassets */,
@@ -273,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAEA66C1E0F4EE10086F307 /* Bee.swift in Sources */,
+				CAAEA66A1E0F3B660086F307 /* GameSprite.swift in Sources */,
 				CA8FB8951E0CD33C00905500 /* GameScene.swift in Sources */,
 				CA8FB8971E0CD33C00905500 /* GameViewController.swift in Sources */,
 				CA8FB88F1E0CD33B00905500 /* AppDelegate.swift in Sources */,
