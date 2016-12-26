@@ -32,12 +32,23 @@ class GameScene: SKScene {
         let bee3 = Bee()
         let bee4 = Bee()
         
+        let skeleton1 = Skeleton()
+        
+        let teddyBear1 = TeddyBear()
+    
+        
         //now I'll user the spawn function from the protocol to bring the three new bees into the world:
         bee2.spawn(parentNode: world, position: CGPoint(x: 325, y: 325))
         bee3.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
         bee4.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
         
         player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
+        
+        skeleton1.spawn(parentNode: world, position: CGPoint(x: 20, y: 145))
+        
+        teddyBear1.spawn(parentNode: world, position: CGPoint(x: 70, y: 130))
+        
+        
         
         // size and position the ground based on the screen size.
         // Position X: Negative one screen width.
@@ -50,6 +61,11 @@ class GameScene: SKScene {
             0)
         // Spawn the ground!
         ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
+        
+        bee2.physicsBody?.mass = 0.2
+        bee2.physicsBody?.applyImpulse(CGVector(dx: -15, dy: 0))
+        skeleton1.physicsBody?.applyImpulse(CGVector(dx: -3, dy: 0))
+        teddyBear1.physicsBody?.applyImpulse(CGVector(dx: 3, dy: 0))
     }
     
     //a new function:

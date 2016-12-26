@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA08BC861E1021AA00D4C348 /* skeletonAppear.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CA08BC851E1021AA00D4C348 /* skeletonAppear.atlas */; };
+		CA08BC881E10220600D4C348 /* Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08BC871E10220600D4C348 /* Skeleton.swift */; };
+		CA08BC8A1E10669600D4C348 /* skeletonWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CA08BC891E10669600D4C348 /* skeletonWalk.atlas */; };
+		CA08BC8E1E10DAA500D4C348 /* skeletonAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CA08BC8D1E10DAA500D4C348 /* skeletonAttack.atlas */; };
+		CA08BC901E10E34D00D4C348 /* teddyBearWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CA08BC8F1E10E34D00D4C348 /* teddyBearWalk.atlas */; };
+		CA08BC921E10E3AB00D4C348 /* TeddyBear.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA08BC911E10E3AB00D4C348 /* TeddyBear.swift */; };
 		CA8FB88F1E0CD33B00905500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8FB88E1E0CD33B00905500 /* AppDelegate.swift */; };
 		CA8FB8931E0CD33C00905500 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA8FB8921E0CD33C00905500 /* Actions.sks */; };
 		CA8FB8951E0CD33C00905500 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8FB8941E0CD33C00905500 /* GameScene.swift */; };
@@ -43,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA08BC851E1021AA00D4C348 /* skeletonAppear.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeletonAppear.atlas; sourceTree = "<group>"; };
+		CA08BC871E10220600D4C348 /* Skeleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skeleton.swift; sourceTree = "<group>"; };
+		CA08BC891E10669600D4C348 /* skeletonWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeletonWalk.atlas; sourceTree = "<group>"; };
+		CA08BC8D1E10DAA500D4C348 /* skeletonAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeletonAttack.atlas; sourceTree = "<group>"; };
+		CA08BC8F1E10E34D00D4C348 /* teddyBearWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = teddyBearWalk.atlas; sourceTree = "<group>"; };
+		CA08BC911E10E3AB00D4C348 /* TeddyBear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeddyBear.swift; sourceTree = "<group>"; };
 		CA8FB88B1E0CD33B00905500 /* Pierre Penguin Escapes the Antarctic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Penguin Escapes the Antarctic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8FB88E1E0CD33B00905500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA8FB8921E0CD33C00905500 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -115,6 +127,10 @@
 		CA8FB88D1E0CD33B00905500 /* Pierre Penguin Escapes the Antarctic */ = {
 			isa = PBXGroup;
 			children = (
+				CA08BC8F1E10E34D00D4C348 /* teddyBearWalk.atlas */,
+				CA08BC8D1E10DAA500D4C348 /* skeletonAttack.atlas */,
+				CA08BC851E1021AA00D4C348 /* skeletonAppear.atlas */,
+				CA08BC891E10669600D4C348 /* skeletonWalk.atlas */,
 				CAAEA6711E0F603F0086F307 /* pierre.atlas */,
 				CAAEA66D1E0F57120086F307 /* ground.atlas */,
 				CAAEA6671E0EDC6E0086F307 /* bee.atlas */,
@@ -123,6 +139,8 @@
 				CA8FB8941E0CD33C00905500 /* GameScene.swift */,
 				CAAEA6691E0F3B660086F307 /* GameSprite.swift */,
 				CAAEA66B1E0F4EE10086F307 /* Bee.swift */,
+				CA08BC911E10E3AB00D4C348 /* TeddyBear.swift */,
+				CA08BC871E10220600D4C348 /* Skeleton.swift */,
 				CAAEA66F1E0F577E0086F307 /* Ground.swift */,
 				CAAEA6731E0F62580086F307 /* Player.swift */,
 				CA8FB8961E0CD33C00905500 /* GameViewController.swift */,
@@ -264,10 +282,14 @@
 			files = (
 				CAAEA66E1E0F57120086F307 /* ground.atlas in Resources */,
 				CAAEA6681E0EDC6E0086F307 /* bee.atlas in Resources */,
+				CA08BC8E1E10DAA500D4C348 /* skeletonAttack.atlas in Resources */,
 				CA8FB89A1E0CD33C00905500 /* Main.storyboard in Resources */,
 				CAAEA6721E0F603F0086F307 /* pierre.atlas in Resources */,
 				CA8FB89C1E0CD33C00905500 /* Assets.xcassets in Resources */,
+				CA08BC861E1021AA00D4C348 /* skeletonAppear.atlas in Resources */,
+				CA08BC901E10E34D00D4C348 /* teddyBearWalk.atlas in Resources */,
 				CA8FB89F1E0CD33C00905500 /* LaunchScreen.storyboard in Resources */,
+				CA08BC8A1E10669600D4C348 /* skeletonWalk.atlas in Resources */,
 				CA8FB8931E0CD33C00905500 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,10 +317,12 @@
 			files = (
 				CAAEA6701E0F577E0086F307 /* Ground.swift in Sources */,
 				CAAEA66C1E0F4EE10086F307 /* Bee.swift in Sources */,
+				CA08BC921E10E3AB00D4C348 /* TeddyBear.swift in Sources */,
 				CAAEA66A1E0F3B660086F307 /* GameSprite.swift in Sources */,
 				CA8FB8951E0CD33C00905500 /* GameScene.swift in Sources */,
 				CAAEA6741E0F62580086F307 /* Player.swift in Sources */,
 				CA8FB8971E0CD33C00905500 /* GameViewController.swift in Sources */,
+				CA08BC881E10220600D4C348 /* Skeleton.swift in Sources */,
 				CA8FB88F1E0CD33B00905500 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
