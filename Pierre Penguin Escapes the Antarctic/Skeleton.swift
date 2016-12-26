@@ -41,6 +41,18 @@ class Skeleton: SKSpriteNode, GameSprite {
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
         self.physicsBody?.affectedByGravity = false
         
+        //creating the physics body for each Skeletor by using the first appearance frame.  Also we'll use the size parameter passed into this function as the size of the physics body:
+        let bodyTexture = textureAtlas.textureNamed("appear_1.png")
+        self.physicsBody = SKPhysicsBody(texture: bodyTexture, size: size)
+        
+        //We'll make the skeletor lose momenturm quickly with linear damping set at 0.9:
+        self.physicsBody?.linearDamping = 0.1
+        //Skeletors could weigh around 15 kilograms:
+        self.physicsBody?.mass = 15
+        //the following variable will prevent the Teddy Bear from rotating:
+        //self.physicsBody?.allowsRotation = false
+       
+        
         
     }
     
@@ -101,6 +113,10 @@ class Skeleton: SKSpriteNode, GameSprite {
     }
     
     func onTap() {
+        
+    }
+    
+    func update(){
         
     }
     

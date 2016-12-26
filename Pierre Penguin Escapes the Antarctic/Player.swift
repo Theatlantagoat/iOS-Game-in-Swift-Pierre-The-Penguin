@@ -24,9 +24,24 @@ class Player: SKSpriteNode, GameSprite{
         createAnimations()
         
         self.size = size
+        
         self.position = position
         
         self.run(flyAnimation, withKey: "flapAnimation")
+        
+        //creating the physics body for Pierre by using the third frame where his wings are tucked in.  Also we'll use the size parameter passed into this function as the size of the physics body:
+        let bodyTexture = textureAtlas.textureNamed("pierre-flying-3.png")
+        self.physicsBody = SKPhysicsBody(texture: bodyTexture, size: size)
+        
+        //We'll make Pierre lose momenturm quickly with linear damping set at 0.9:
+        self.physicsBody?.linearDamping = 0.9
+        //Adult penguins weigh around 30 kilograms:
+        self.physicsBody?.mass = 30
+        //the following variable will prevent Pierre from rotating:
+        self.physicsBody?.allowsRotation = false
+        
+        
+        
         
     }
     
@@ -67,6 +82,10 @@ class Player: SKSpriteNode, GameSprite{
     }
     
     func onTap() {
+        
+    }
+    
+    func update(){
         
     }
 }

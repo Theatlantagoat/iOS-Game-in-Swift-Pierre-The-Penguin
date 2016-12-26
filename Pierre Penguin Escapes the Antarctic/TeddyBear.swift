@@ -30,6 +30,18 @@ class TeddyBear: SKSpriteNode, GameSprite {
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
         self.physicsBody?.affectedByGravity = false
         
+        //creating the physics body for each Teddy by using the first walking frame.  Also we'll use the size parameter passed into this function as the size of the physics body:
+        let bodyTexture = textureAtlas.textureNamed("go_1.png")
+        self.physicsBody = SKPhysicsBody(texture: bodyTexture, size: size)
+        
+        //We'll make the teddy bear lose momenturm quickly with linear damping set at 0.9:
+        self.physicsBody?.linearDamping = 0.9
+        //Teddy bears could weigh around 2 kilograms:
+        self.physicsBody?.mass = 2
+        //the following variable will prevent the Teddy Bear from rotating:
+        //self.physicsBody?.allowsRotation = false
+
+        
         
     }
     
